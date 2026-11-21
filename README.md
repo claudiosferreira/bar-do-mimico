@@ -87,3 +87,8 @@ Se você alterou `ADMIN_USERNAME` no `config.js`, use exatamente o mesmo nome no
 4. Edite os textos, cores, imagens e informações e clique em `Salvar e publicar alterações`.
 
 O cardápio agora também atualiza automaticamente quando produtos são inseridos/alterados e exibe mensagem de erro caso a consulta ao banco falhe.
+
+## Atualizações desta versão
+- O cardápio público mostra imediatamente os produtos salvos no navegador e atualiza os dados em segundo plano; quando um cliente adiciona um item, o contador e o botão mudam na hora.
+- Em **Painel > Loja e entrega > Configurações da página inicial**, há quatro cores globais para todos os cards e botões de produto. Uma única configuração vale para todos os itens do cardápio.
+- Em **Painel > Pedidos**, cada pedido tem o botão **Imprimir pedido**. Ele abre uma comanda formatada para bobina térmica de 80 mm e chama a impressão do navegador. Para impressora térmica, configure-a como impressora padrão e habilite a impressão pelo navegador/terminal conforme o equipamento.
