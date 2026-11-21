@@ -78,3 +78,12 @@ Se você alterou `ADMIN_USERNAME` no `config.js`, use exatamente o mesmo nome no
 - O alerta sonoro depende do painel estar aberto e do navegador permitir áudio.
 - A taxa de entrega nesta versão é fixa por pedido.
 - Antes de operar comercialmente, publique uma política de privacidade e regras de uso adequadas, inclusive para venda de bebidas alcoólicas e verificação de idade.
+
+
+## Atualização: editor visual da página inicial
+1. No Supabase, abra SQL Editor e execute o arquivo `site_content_migration.sql`.
+2. Publique todos os arquivos desta pasta no projeto Vercel conectado ao repositório GitHub (não envie apenas os arquivos antigos).
+3. Entre em `/admin.html`, abra `Loja e entrega` e use a seção `Configurações da página inicial`.
+4. Edite os textos, cores, imagens e informações e clique em `Salvar e publicar alterações`.
+
+O cardápio agora também atualiza automaticamente quando produtos são inseridos/alterados e exibe mensagem de erro caso a consulta ao banco falhe.
