@@ -1,0 +1,2 @@
+// Cole aqui as credenciais do seu projeto Supabase. Não coloque a service_role key neste arquivo.
+window.APP_CONFIG={SUPABASE_URL:"COLE_AQUI_A_URL_DO_SUPABASE",SUPABASE_ANON_KEY:"COLE_AQUI_A_CHAVE_ANON_PUBLICA",WHATSAPP:"98983280371"};

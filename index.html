@@ -1,38 +1,14 @@
 <!doctype html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090b0a"><title>Bar do Mimico — Bebidas & Delivery</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="announcement">🍻 <span>SEU BAR FAVORITO, AGORA NA SUA CASA</span> <b>DELIVERY BAR DO MIMICO</b></div>
-<header class="site-header">
- <a class="brand" href="#"><span class="brand-icon">M<span>!</span></span><span class="brand-copy"><strong>BAR DO MIMICO</strong><small>BEBIDAS • GELO • CONVENIÊNCIA</small></span></a>
- <nav><a href="#cardapio">Cardápio</a><a href="#vantagens">Por que pedir?</a></nav>
- <div class="header-actions"><button id="cartOpen" class="cart-btn"><span>🛒</span> <span class="cart-label">Meu pedido</span><b id="cartCount">0</b></button><button id="adminOpen" class="admin-link" title="Área administrativa">⚙</button></div>
-</header>
-<section class="hero">
- <div class="hero-bg-orb"></div><div class="hero-content">
-  <div class="pill"><i></i> DELIVERY EM PALMEIRÂNDIA</div>
-  <h1>A RESENHA<br>COMEÇA <em>AQUI.</em></h1>
-  <p>Bebida gelada, praticidade e aquele precinho que combina com o momento. Escolha, peça e receba!</p>
-  <a class="primary-btn" href="#cardapio">ESCOLHER MINHAS BEBIDAS <span>↗</span></a>
-  <div class="hero-proof"><span>✦ PEDIDO FÁCIL</span><span>✦ ATENDIMENTO PELO WHATSAPP</span></div>
- </div>
- <div class="hero-visual"><div class="visual-glow"></div><div class="hero-photo"><div class="photo-label">GELADA<br><b>DE VERDADE.</b></div><div class="photo-stamp">BM<br><small>DELIVERY</small></div></div><div class="floating-tag">🍺 <span>É só escolher<br><b>e pedir!</b></span></div></div>
- <div class="hero-bottom">BOM DE PREÇO. BOM DE PEDIDO. BOM DEMAIS.</div>
-</section>
-<section class="benefits" id="vantagens"><div><span class="benefit-icon">❄</span><span><b>DO JEITO QUE VOCÊ GOSTA</b><small>Seu pedido sem complicação</small></span></div><div><span class="benefit-icon">⚡</span><span><b>RÁPIDO E PRÁTICO</b><small>Finalize direto no WhatsApp</small></span></div><div><span class="benefit-icon">📍</span><span><b>PALMEIRÂNDIA - MA</b><small>Consulte a taxa de entrega</small></span></div></section>
-<main id="cardapio">
- <div class="menu-heading"><div><div class="eyebrow">ESCOLHA O QUE VAI ROLAR</div><h2>PEÇA <em>AGORA.</em></h2><p>Seu próximo brinde está a poucos cliques.</p></div><div class="menu-side-note">CARDÁPIO<br><b>BAR DO MIMICO</b></div></div>
- <div id="categories" class="categories"></div><div id="products" class="products"></div>
- <div class="age-note">🔞 A venda de bebidas alcoólicas é proibida para menores de 18 anos. Beba com responsabilidade.</div>
-</main>
-<footer><a class="brand" href="#"><span class="brand-icon">M<span>!</span></span><span class="brand-copy"><strong>BAR DO MIMICO</strong><small>BEBIDAS • GELO • CONVENIÊNCIA</small></span></a><div>O seu pedido, a nossa resenha. <small>Palmeirândia — Maranhão</small></div><b>VEM DE MIMICO. 🍻</b></footer>
-<div id="cartDrawer" class="overlay hidden"><div class="drawer"><div class="drawer-head"><div><small>SEU PEDIDO</small><h2>Meu carrinho</h2></div><button class="x" data-close="cartDrawer">×</button></div><div id="cartItems"></div><div id="totals" class="totals"></div><form id="checkout"><h3>PARA ONDE VAI O PEDIDO?</h3><input name="name" placeholder="Seu nome" required><input name="address" placeholder="Endereço completo" required><input name="reference" placeholder="Ponto de referência (opcional)"><select name="payment"><option>Pix</option><option>Dinheiro</option><option>Cartão</option></select><input name="change" placeholder="Troco para quanto? (se necessário)"><button class="primary-btn full">CONTINUAR PELO WHATSAPP ↗</button><small class="secure-note">Você confere o pedido e envia a mensagem pelo WhatsApp.</small></form></div></div>
-<div id="adminDrawer" class="overlay hidden"><div class="drawer admin-drawer"><div class="drawer-head"><div><small>PAINEL RESTRITO</small><h2>Administração</h2></div><button class="x" data-close="adminDrawer">×</button></div><div id="adminLogin"><p>Entre para gerenciar o cardápio e as entregas.</p><input id="adminPass" type="password" placeholder="Senha administrativa"><button id="loginBtn" class="primary-btn full">ENTRAR</button><small>Senha inicial: mimico123. Altere antes de publicar.</small></div><div id="adminContent" class="hidden"><div class="admin-tabs"><button data-tab="itemsTab">Produtos</button><button data-tab="settingsTab">Configurações</button></div><section id="itemsTab"><h3>PRODUTO DO CARDÁPIO</h3><form id="productForm"><input type="hidden" name="id"><input name="name" placeholder="Nome do produto" required><input name="category" placeholder="Categoria (ex.: Cervejas)" required><textarea name="description" placeholder="Descrição do produto"></textarea><div class="two"><input name="price" type="number" min="0" step=".01" placeholder="Preço (R$)" required><input name="discount" type="number" min="0" step=".01" placeholder="Preço promocional"></div><input name="image" type="url" placeholder="URL da imagem"><label class="check"><input name="active" type="checkbox" checked> Produto disponível</label><button class="primary-btn full">SALVAR PRODUTO</button></form><div id="adminProducts"></div></section><section id="settingsTab" class="hidden"><h3>CONFIGURAÇÕES DA LOJA</h3><form id="settingsForm"><label>Taxa de entrega (R$)<input name="delivery" type="number" min="0" step=".01"></label><label>WhatsApp (com DDD)<input name="phone" value="98983280371"></label><button class="primary-btn full">SALVAR CONFIGURAÇÕES</button></form></section></div></div></div>
-<script src="app.js"></script>
-</body></html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f7f4"><title>Bar do Mimico | Delivery</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body class="store">
+<header class="header"><a class="logo" href="#"><span class="logo-mark">M</span><span>bar do <b>mimico</b><small>DELIVERY • PALMEIRÂNDIA</small></span></a><nav><a href="#ofertas">Ofertas</a><a href="#produtos">Bebidas</a><a href="#localizacao">Onde estamos</a></nav><button id="openCart" class="cart-top">Sacola <span id="cartCount">0</span></button></header>
+<section class="hero"><div class="hero-copy"><div class="location-pill"><span>●</span> PALMEIRÂNDIA - MA</div><h1>O brinde que<br>faltava no seu <em>rolê.</em></h1><p>Escolha suas bebidas favoritas e receba em casa. Fácil, rápido e sem complicação.</p><a href="#produtos" class="btn-main">PEDIR AGORA <b>→</b></a><div class="hero-points"><span>✓ Pedido pelo WhatsApp</span><span>✓ Entrega local</span></div></div><div class="hero-image"><div class="hero-image-shade"></div><div class="hero-sticker">GELADA<br><b>NO PONTO!</b></div><div class="hero-caption">SEU MOMENTO<br><b>PEDE MIMICO.</b></div></div></section>
+<section class="quick-info"><div><span class="qi-icon">🛵</span><span><b>Delivery local</b><small>Palmeirândia - MA</small></span></div><div><span class="qi-icon">💬</span><span><b>Pedido fácil</b><small>Confirme pelo WhatsApp</small></span></div><div><span class="qi-icon">🧊</span><span><b>Do seu jeito</b><small>Consulte disponibilidade</small></span></div></section>
+<main>
+<section id="ofertas" class="offer-strip"><div><small>SEU PRÓXIMO BRINDE</small><h2>Tem coisa boa<br>te esperando.</h2><p>Confira o cardápio e aproveite.</p><a href="#produtos">VER CARDÁPIO →</a></div><div class="offer-art">🍻</div></section>
+<section id="produtos" class="catalog"><div class="section-title"><div><small>ESCOLHA O QUE VAI ROLAR</small><h2>O que você procura?</h2></div><div class="search-wrap"><input id="search" placeholder="Buscar produto..."></div></div><div id="categories" class="chips"></div><div id="products" class="product-grid"><div class="loading">Carregando cardápio...</div></div></section>
+<section id="localizacao" class="location-card"><div><small>ESTAMOS POR AQUI</small><h2>Bar do Mimico</h2><p>Av. 7 de Setembro, Centro, Palmeirândia-MA</p><p class="muted">Referência: Ao lado da Praça da Família.</p></div><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Av.+7+de+Setembro,+Centro,+Palmeir%C3%A2ndia+-+MA">VER NO MAPA ↗</a></section>
+</main><footer><div class="logo"><span class="logo-mark">M</span><span>bar do <b>mimico</b><small>DELIVERY • PALMEIRÂNDIA</small></span></div><p>O brinde que faltava no seu rolê.</p><small>Venda de bebidas alcoólicas proibida para menores de 18 anos. Beba com responsabilidade.</small></footer>
+<div id="cartModal" class="modal hidden"><div class="modal-card"><div class="modal-head"><div><small>SUA ESCOLHA</small><h2>Sacola de compras</h2></div><button class="close" data-close="cartModal">×</button></div><div id="cartItems"></div><div id="cartTotals" class="cart-totals"></div><form id="checkout"><h3>Onde entregamos?</h3><input name="customer_name" placeholder="Seu nome" required><input name="customer_phone" placeholder="Seu telefone / WhatsApp" required><input name="address" placeholder="Rua, número e bairro" required><input name="reference" placeholder="Ponto de referência (opcional)"><select name="payment"><option>Pix</option><option>Dinheiro</option><option>Cartão</option></select><input name="change_for" placeholder="Troco para quanto? (se necessário)"><button class="btn-main full">ENVIAR PEDIDO PELO WHATSAPP →</button><small class="form-hint">O pedido será registrado e você será direcionado ao WhatsApp para enviar a mensagem.</small></form></div></div>
+<div id="toast" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="store.js"></script></body></html>
