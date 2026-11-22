@@ -109,6 +109,5 @@ O checkout grava o pedido no Supabase e abre o WhatsApp do estabelecimento com c
 5. O ranking considera número de pedidos, quantidade de itens e valor total gasto; pedidos cancelados são ignorados.
 6. Descontos percentuais ou em reais são aplicados no resumo da sacola e no valor registrado no pedido.
 7. A marca pública e o título da aba do navegador agora ficam fixos como **Bar do Mimico**.
-Atualização de publicação - Bar do Mimico V9
 
 **Atenção:** o relatório reflete pedidos registrados no sistema, não conciliação bancária. Revise a migração SQL antes de executar em produção e faça backup do banco.

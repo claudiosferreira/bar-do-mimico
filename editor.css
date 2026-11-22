@@ -5,3 +5,12 @@
 .tools label input[type="text"],.tools label select{width:100%;box-sizing:border-box;padding:9px;border:1px solid #ddd;border-radius:8px;background:#fff;color:#20291c;font:inherit}
 
 .tools label small{display:block;font-size:10px;color:#7b8374;font-weight:400;line-height:1.4;margin-top:5px}.screen-tools p{width:100%;margin:0;font-size:11px}.device:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid #91aa24;outline-offset:2px}
+
+/* Melhorias do editor visual V10 */
+button:disabled{opacity:.42;cursor:not-allowed}
+.layer-list{width:100%;max-height:220px;overflow:auto;display:flex;flex-direction:column;gap:4px;margin-top:6px}
+.layer-item{width:100%;text-align:left;background:#fff;border:1px solid #dce1d5;color:#34402d;font-size:11px;padding:8px 9px;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.layer-item.active{background:#eaf3c9;border-color:#91aa24;color:#243313}
+#zoomValue{font-size:12px;min-width:42px;text-align:center;align-self:center}
+.preview iframe{touch-action:auto}
+@media(min-width:761px){.layout{grid-template-columns:330px minmax(0,1fr)}}
