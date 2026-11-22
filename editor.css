@@ -18,3 +18,7 @@ button:disabled{opacity:.42;cursor:not-allowed}
 /* V11 — controles de movimentação mais fáceis de agarrar */
 .editor-move-grip{z-index:2147483002!important;display:flex;align-items:center;justify-content:center;user-select:none;-webkit-user-select:none;touch-action:none!important}
 .editor-resize-handle{z-index:2147483003!important;user-select:none;-webkit-user-select:none;touch-action:none!important}
+
+/* V13: alvos de arraste e gestos mais confiáveis dentro da prévia */
+.editor-move-grip{pointer-events:auto!important;touch-action:none!important;cursor:grab!important}
+.editor-resize-handle{pointer-events:auto!important;touch-action:none!important}
