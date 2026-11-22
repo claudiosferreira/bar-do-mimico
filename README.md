@@ -99,3 +99,15 @@ O cliente não informa e-mail. O sistema converte internamente o nome de usuári
 
 ## Finalização pelo WhatsApp
 O checkout grava o pedido no Supabase e abre o WhatsApp do estabelecimento com cliente, telefone, endereço, referência, itens, quantidades, valores, taxa, total, pagamento e troco. O cliente informa o próprio WhatsApp no checkout. Configure `WHATSAPP` em `config.js` ou no editor com DDI e DDD (somente números); se informar sem `55`, o sistema acrescenta o código do Brasil.
+
+
+## V9 — painel de clientes, relatórios e fidelidade
+1. Execute `migration_admin_clientes_relatorios.sql` no SQL Editor do Supabase antes de publicar esta versão.
+2. Envie todos os arquivos atualizados ao mesmo repositório conectado à Vercel.
+3. No painel administrativo, use as abas **Clientes**, **Relatórios** e **Ranking e descontos**.
+4. Bloqueio impede o acesso do cliente à loja; exclusão remove a conta Auth e o histórico de pedidos por função protegida para administradores.
+5. O ranking considera número de pedidos, quantidade de itens e valor total gasto; pedidos cancelados são ignorados.
+6. Descontos percentuais ou em reais são aplicados no resumo da sacola e no valor registrado no pedido.
+7. A marca pública e o título da aba do navegador agora ficam fixos como **Bar do Mimico**.
+
+**Atenção:** o relatório reflete pedidos registrados no sistema, não conciliação bancária. Revise a migração SQL antes de executar em produção e faça backup do banco.
