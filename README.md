@@ -92,3 +92,10 @@ O cardápio agora também atualiza automaticamente quando produtos são inserido
 - O cardápio público mostra imediatamente os produtos salvos no navegador e atualiza os dados em segundo plano; quando um cliente adiciona um item, o contador e o botão mudam na hora.
 - Em **Painel > Loja e entrega > Configurações da página inicial**, há quatro cores globais para todos os cards e botões de produto. Uma única configuração vale para todos os itens do cardápio.
 - Em **Painel > Pedidos**, cada pedido tem o botão **Imprimir pedido**. Ele abre uma comanda formatada para bobina térmica de 80 mm e chama a impressão do navegador. Para impressora térmica, configure-a como impressora padrão e habilite a impressão pelo navegador/terminal conforme o equipamento.
+
+
+## Cadastro por nome de usuário e senha
+O cliente não informa e-mail. O sistema converte internamente o nome de usuário em um endereço técnico `usuario@clientes.bardomimico.com.br` para autenticar no Supabase. Execute `migration_usuario_sem_email.sql` no SQL Editor do Supabase e, em Authentication > Providers > Email, desative a confirmação de e-mail para que o cadastro sem caixa postal funcione. O e-mail técnico não recebe mensagens.
+
+## Finalização pelo WhatsApp
+O checkout grava o pedido no Supabase e abre o WhatsApp do estabelecimento com cliente, telefone, endereço, referência, itens, quantidades, valores, taxa, total, pagamento e troco. O cliente informa o próprio WhatsApp no checkout. Configure `WHATSAPP` em `config.js` ou no editor com DDI e DDD (somente números); se informar sem `55`, o sistema acrescenta o código do Brasil.

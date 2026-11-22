@@ -40,8 +40,8 @@ create table if not exists public.orders (
 create or replace function public.handle_new_user()
 returns trigger language plpgsql security definer set search_path=public as $$
 begin
- insert into public.profiles(id,full_name,phone,role)
- values(new.id,coalesce(new.raw_user_meta_data->>'full_name',''),coalesce(new.raw_user_meta_data->>'phone',''),'customer');
+ insert into public.profiles(id,full_name,phone,username,role)
+ values(new.id,coalesce(new.raw_user_meta_data->>'full_name',''),coalesce(new.raw_user_meta_data->>'phone',''),nullif(new.raw_user_meta_data->>'username',''),'customer');
  return new;
 end; $$;
 drop trigger if exists on_auth_user_created on auth.users;
