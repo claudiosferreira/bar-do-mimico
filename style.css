@@ -7,3 +7,13 @@
 .quantity span{min-width:1rem;text-align:center;font-weight:700}
 .quantity button{cursor:pointer;touch-action:manipulation}
 .add-btn{touch-action:manipulation}
+
+/* Personalização detalhada dos itens dentro da sacola */
+.cart-line{border-bottom-color:var(--cart-line-color,var(--line))}
+.cart-line>div>b{color:var(--cart-item-color,var(--lime))}
+.cart-line> b{color:var(--cart-price-color,var(--lime))}
+.quantity span{color:var(--cart-quantity-color,var(--lime))}
+.quantity button{color:var(--cart-qty-text,var(--ink))}
+.quantity button[data-remove]{background:var(--cart-remove-bg,var(--cart-qty-bg,#eef2e1))}
+.cart-summary{color:var(--cart-summary-color,#6e7667)}
+.cart-summary strong{color:var(--cart-total-color,var(--ink))}
