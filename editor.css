@@ -14,3 +14,7 @@ button:disabled{opacity:.42;cursor:not-allowed}
 #zoomValue{font-size:12px;min-width:42px;text-align:center;align-self:center}
 .preview iframe{touch-action:auto}
 @media(min-width:761px){.layout{grid-template-columns:330px minmax(0,1fr)}}
+
+/* V11 — controles de movimentação mais fáceis de agarrar */
+.editor-move-grip{z-index:2147483002!important;display:flex;align-items:center;justify-content:center;user-select:none;-webkit-user-select:none;touch-action:none!important}
+.editor-resize-handle{z-index:2147483003!important;user-select:none;-webkit-user-select:none;touch-action:none!important}
