@@ -46,3 +46,30 @@
   flex: 0 0 auto !important;
   white-space: nowrap !important;
 }
+
+
+/* V16 — remove deslocamentos antigos e alinha os filtros do cardápio */
+#categories.category-list {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px 14px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: static !important;
+  transform: none !important;
+  margin: 24px 0 28px !important;
+  padding: 0 !important;
+}
+#categories.category-list > button.category {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  float: none !important;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+  align-self: center !important;
+  white-space: nowrap !important;
+}
