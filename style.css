@@ -17,3 +17,32 @@
 .quantity button[data-remove]{background:var(--cart-remove-bg,var(--cart-qty-bg,#eef2e1))}
 .cart-summary{color:var(--cart-summary-color,#6e7667)}
 .cart-summary strong{color:var(--cart-total-color,var(--ink))}
+
+
+
+/* V15 — alinhamento fixo dos filtros de categoria do cardápio.
+   Os filtros devem permanecer em fluxo flexível; posições absolutas/relativas
+   gravadas pelo editor não podem empurrá-los nem sobrepor os produtos. */
+#categories.category-list {
+  display: flex !important;
+  flex-flow: row wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  margin: 25px 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  position: relative !important;
+}
+#categories.category-list > .category {
+  position: static !important;
+  inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: none !important;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+  white-space: nowrap !important;
+}
